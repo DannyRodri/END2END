@@ -1,0 +1,25 @@
+# Entorno virtual
+venv/
+.venv/
+
+# MLflow artifacts
+mlruns/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Archivos de entorno
+.env
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
