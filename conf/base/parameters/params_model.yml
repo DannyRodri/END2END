@@ -1,0 +1,23 @@
+modeling:
+  models:
+    logistic_regression:
+      class: LogisticRegression
+      params:
+        max_iter: 1000
+      param_grid:
+        model__C: [0.1, 1, 10]
+
+    random_forest:
+      class: RandomForestClassifier
+      params:
+        random_state: 42
+      param_grid:
+        model__n_estimators: [100, 200]
+        model__max_depth: [null, 10]
+
+    gradient_boosting:
+      class: GradientBoostingClassifier
+      params: {}
+      param_grid:
+        model__n_estimators: [100, 200]
+        model__learning_rate: [0.05, 0.1]

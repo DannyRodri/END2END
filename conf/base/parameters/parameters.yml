@@ -1,0 +1,12 @@
+nombre_run: 'model_selection_titanic'
+
+nombre_experiment: 'titanic_v4'
+
+aliases_champion: 'champion'
+nombre_usecase: 'titanic'
+
+
+num_features : ["Age", "Fare", "SibSp", "Parch"]
+cat_features : ["Sex", "Embarked", "Pclass"]
+
+target : 'Survived'

@@ -1,0 +1,17 @@
+titanic_raw:
+  type: pandas.CSVDataset
+  filepath: data/raw/titanic_train.csv
+
+
+titanic_intermediate:
+  type: pandas.CSVDataset
+  filepath: data/intermediate/titanic_intermediate.csv
+
+
+to_predict:
+  type: pandas.CSVDataset
+  filepath: data/titanic_test.csv
+  
+predicciones_modelo: 
+  type: pandas.CSVDataset
+  filepath: data/primary/tracking_model.csv
