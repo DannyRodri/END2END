@@ -1,6 +1,6 @@
 nombre_run: 'model_selection_titanic'
 
-nombre_experiment: 'titanic_v4'
+nombre_experiment: 'titanic_v5'
 
 aliases_champion: 'champion'
 nombre_usecase: 'titanic'

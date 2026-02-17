@@ -8,9 +8,13 @@ titanic_intermediate:
   filepath: data/intermediate/titanic_intermediate.csv
 
 
-to_predict:
+to_predict_raw:
   type: pandas.CSVDataset
-  filepath: data/titanic_test.csv
+  filepath: data/raw/titanic_test.csv
+
+to_predict_intermediate:
+  type: pandas.CSVDataset
+  filepath: data/intermediate/titanic_test_intermediate.csv
 
 baseline_modelo: 
   type: pandas.CSVDataset
@@ -19,4 +23,6 @@ baseline_modelo:
 
 predicciones_modelo: 
   type: pandas.CSVDataset
-  filepath: data/primary/tracking_model.csv
+  filepath: data/primary/predicciones_modelo.csv
+
+

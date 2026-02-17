@@ -12,3 +12,14 @@ data_validation:
     Fare: float64
     Cabin: object
     Embarked: object
+
+data_schema:
+  age:
+    dtype: int
+    nullable: false
+  salary:
+    dtype: float
+    nullable: false
+  department:
+    dtype: str
+    nullable: true

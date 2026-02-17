@@ -22,7 +22,7 @@ def crear_preprocesador(num_features, cat_features):
 
     return preprocessor
 
-def validar_y_limpieza(df: pd.DataFrame, config_columnas: dict) -> pd.DataFrame:
+def validar_y_limpieza(df: pd.DataFrame) -> pd.DataFrame:
     
     """
     Valida columnas, tipos y aplica limpieza básica.
@@ -39,26 +39,7 @@ def validar_y_limpieza(df: pd.DataFrame, config_columnas: dict) -> pd.DataFrame:
     """
     df = df.copy()
 
-    columnas_requeridas = set(config_columnas.keys())
-    columnas_df = set(df.columns)
-
-    faltantes = columnas_requeridas - columnas_df
-    extras = columnas_df - columnas_requeridas
-
-    if faltantes:
-        # logger.error("Faltan columnas requeridas: %s", faltantes)
-        raise ValueError(f"Faltan columnas requeridas: {faltantes}")
-
-    if extras:
-        # logger.warning("Columnas extra detectadas, serán eliminadas: %s", extras)
-        df = df[list(columnas_requeridas)]
-
-    for col, tipo in config_columnas.items():
-        try:
-            df[col] = df[col].astype(tipo)
-        except Exception as e:
-            # logger.error("Error convirtiendo columna %s a %s", col, tipo)
-            raise TypeError(f"Error convirtiendo columna '{col}' a {tipo}: {e}")
+ 
 
     df = df.drop_duplicates()
     df = df.dropna(how="all")
