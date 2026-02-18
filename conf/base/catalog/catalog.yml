@@ -1,28 +1,37 @@
+titanic_input:
+  type: pandas.CSVDataset
+  filepath: data/0_input/titanic_train.csv
+
+titanic_input_to_predict:
+  type: pandas.CSVDataset
+  filepath: data/0_input/titanic_test.csv
+
 titanic_raw:
   type: pandas.CSVDataset
-  filepath: data/raw/titanic_train.csv
-
+  filepath: data/01_raw/titanic_train.csv
 
 titanic_intermediate:
   type: pandas.CSVDataset
-  filepath: data/intermediate/titanic_intermediate.csv
-
+  filepath: data/02_intermediate/titanic_intermediate.csv
 
 to_predict_raw:
   type: pandas.CSVDataset
-  filepath: data/raw/titanic_test.csv
+  filepath: data/01_raw/titanic_test.csv
 
 to_predict_intermediate:
   type: pandas.CSVDataset
-  filepath: data/intermediate/titanic_test_intermediate.csv
+  filepath: data/02_intermediate/titanic_test_intermediate.csv
 
 baseline_modelo: 
   type: pandas.CSVDataset
-  filepath: data/primary/baseline_modelo.csv
+  filepath: data/03_primary/baseline_modelo.csv
 
+retraining: 
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/retraining.csv
 
 predicciones_modelo: 
   type: pandas.CSVDataset
-  filepath: data/primary/predicciones_modelo.csv
+  filepath: data/03_primary/predicciones_modelo.csv
 
 

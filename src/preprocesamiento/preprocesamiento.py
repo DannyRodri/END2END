@@ -22,7 +22,7 @@ def crear_preprocesador(num_features, cat_features):
 
     return preprocessor
 
-def validar_y_limpieza(df: pd.DataFrame) -> pd.DataFrame:
+def limpieza(df: pd.DataFrame) -> pd.DataFrame:
     
     """
     Valida columnas, tipos y aplica limpieza básica.

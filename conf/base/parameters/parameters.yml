@@ -1,6 +1,6 @@
 nombre_run: 'model_selection_titanic'
 
-nombre_experiment: 'titanic_v5'
+nombre_experiment: 'titanic_v1'
 
 aliases_champion: 'champion'
 nombre_usecase: 'titanic'
@@ -10,3 +10,7 @@ num_features : ["Age", "Fare", "SibSp", "Parch"]
 cat_features : ["Sex", "Embarked", "Pclass"]
 
 target : 'Survived'
+
+path_input_data_ingesta: 'data/0_input/titanic_train.csv'
+path_output_data_ingesta: 'data/raw/titanic_train.csv'
+
